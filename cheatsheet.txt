@@ -5,7 +5,7 @@ docker run --rm quickstart
 
 tp1:
 docker build -t tp1 .
-docker run --rm tp1
+docker run --rm tp1 -p 8000:8000
 
 Soit xxx.yyy.0.0/16, que represente /16 ?
 /16 représente le masque du réseau ou sous-réseau.
