@@ -1,0 +1,19 @@
+quickstart:
+
+docker build -t quickstart .
+docker run --rm quickstart
+
+
+tp1:
+
+
+tp2:
+
+
+tp3:
+
+
+tp4:
+
+
+tp5:
