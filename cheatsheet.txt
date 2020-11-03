@@ -20,6 +20,7 @@ tp2:
 streamlit run script.py
 
 tp3:
+#baseModel nous permet de définir un modèle de données, utilisable pour représenter les données requises par une route de notre API
 
 
 tp4:
