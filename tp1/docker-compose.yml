@@ -6,7 +6,8 @@ services:
     ports:
       - "8000"
     networks:
-      - frontend
+      node_net:
+        ipv4_address: 172.16.238.10
     deploy:
       replicas: 2
       update_config:
@@ -14,3 +15,14 @@ services:
         delay: 10s
       restart_policy:
         condition: on-failure
+
+build:
+  context: .
+  network: node_net
+
+networks:
+  node_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.16.0.0/16"
