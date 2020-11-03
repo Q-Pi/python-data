@@ -35,3 +35,18 @@ heroku logs --tail
 
 
 tp5:
+Pourquoi utiliser un fichier d'environement ?
+Pour définir la connexion à la base de donnée.
+
+Pourquoi monter un volume ?
+Pour conserver la base de donnée.
+
+run le container avec `docker exec`
+run le container avec `docker-compose run` 
+Expliquer la difference entre ses commandes
+
+docker exec execute une commande dans un container en cours d'éxécution.
+docker-compose run lance un container pour executer une commande.
+
+Que fait le fichier `docker-entrypoint.sh` à la racine du container?
+[reponse]
