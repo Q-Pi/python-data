@@ -1,24 +1,15 @@
-version: "3.8"
+version: "3.3"
 services:
-
-  name:
+  tp1:
+    build:
+      context: ./.
+      dockerfile: Dockerfile-alternate
     image: tp1
     ports:
-      - "8000"
+      - "8000:8000"
     networks:
       node_net:
         ipv4_address: 172.16.238.10
-    deploy:
-      replicas: 2
-      update_config:
-        parallelism: 2
-        delay: 10s
-      restart_policy:
-        condition: on-failure
-
-build:
-  context: .
-  network: node_net
 
 networks:
   node_net:

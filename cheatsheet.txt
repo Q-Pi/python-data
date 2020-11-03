@@ -13,6 +13,8 @@ Soit xxx.yyy.0.0/16, que represente /16 ?
 sudo groupadd docker			#ajoute un nouveau groupe (nommé docker)
 sudo gpasswd -a $USER docker	#ajoute l'utilisateur $USER au groupe 'docker' #permet d'éviter d'avoir à faire 'sudo' avant chaque commande 'docker'
 
+docker-compose up
+
 tp2:
 
 
