@@ -1,1 +1,7 @@
 jupyter
+scikit-learn
+pandas
+numpy
+streamlit
+joblib
+stop_words
