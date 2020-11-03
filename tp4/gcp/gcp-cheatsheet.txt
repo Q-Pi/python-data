@@ -1,0 +1,29 @@
+CI/CD - GCP :
+
+
+$(gcloud config list --format='value(core.project)')
+
+
+PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format='value(projectNumber)')
+
+
+#Activer les API Cloud Build, Cloud Run, App Engine pour le projet.
+gcloud projects add-iam-policy-binding $PROJECT_ID --member=serviceAccount:$PROJECT_NUMBER@cloudbuild.gserviceaccount.com --role=roles/run.admin
+
+
+gcloud config set core/project bankmarketingml
+
+
+gcloud iam service-accounts add-iam-policy-binding $PROJECT_NUMBER-compute@developer.gserviceaccount.com --member=serviceAccount:$PROJECT_NUMBER@cloudbuild.gserviceaccount.com --role=roles/iam.serviceAccountUser
+
+
+#Activer l'API Container Registery
+
+
+docker tag uvicorn-gunicorn-fastapi_bankmarketingml gcr.io/$PROJECT_ID/uvicorn-gunicorn-fastapi_bankmarketingml
+
+
+docker push gcr.io/$PROJECT_ID/uvicorn-gunicorn-fastapi_bankmarketingml
+
+
+gcloud builds submit --config cloudbuild.yaml

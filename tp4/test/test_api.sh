@@ -1,1 +1,0 @@
-curl -v http://localhost:80/api
