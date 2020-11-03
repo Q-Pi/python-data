@@ -20,10 +20,19 @@ tp2:
 streamlit run script.py
 
 tp3:
+./test_api.sh 	#expected: 		200:OK
 #baseModel nous permet de définir un modèle de données, utilisable pour représenter les données requises par une route de notre API
 
-
 tp4:
+heroku login
+heroku create
+git push heroku main
+heroku ps:scale web=1
+heroku open
+heroku logs --tail
+Procfile: web: gunicorn gettingstarted.wsgi --log-file -
+heroku ps
+app dependencies ...
 
 
 tp5:

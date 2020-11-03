@@ -1,15 +1,15 @@
 version: "3.3"
 services:
-  tp2:
+  tp3:
     build:
       context: .
       dockerfile: Dockerfile
-    image: tp2
+    image: tp3
     ports:
-      - "8000:8000"
+      - "80:80"
     networks:
       node_net:
-        ipv4_address: 172.16.238.2
+        ipv4_address: 172.16.238.3
 
 networks:
   node_net:
