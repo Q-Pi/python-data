@@ -50,3 +50,7 @@ docker-compose run lance un container pour executer une commande.
 
 Que fait le fichier `docker-entrypoint.sh` à la racine du container?
 [reponse]
+
+docker exec -it container_id psql -U postgres
+\dt
+\d+ table_name
